@@ -31,7 +31,7 @@ namespace csharp_oop_shop
         private int CodeGeneration()
         {
             Random rnd = new Random();
-            return rnd.Next(10000, 99999);
+            return rnd.Next(100, 99999999);
         }
 
         public decimal GetPrice()
@@ -48,6 +48,11 @@ namespace csharp_oop_shop
         public string ExtendedName()
         {
             return Code + " " + Name;
+        }
+
+        public string CodeWhitPadding()
+        {
+            return Code.ToString().PadLeft(8, '0');
         }
     }
 }
