@@ -26,14 +26,30 @@ namespace csharp_oop_shop
         Testate poi i vostri oggetti Prodotto, istanziandoli e provando ad interargirci per testare tutti i metodi che avete previsto
         */
         private int _code;
-        public int code
+        public int Code
         {
             get { return _code; }
         }
-        public string name { get; set; }
-        public string description { get; set; }
-        public decimal price { get; set; }
-        public decimal iva { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public decimal Price { get; set; }
+        public decimal IVA { get; set; }
+
+        public Product(string name, string description, decimal price, decimal iva)
+        {
+            _code = CodeGeneration();
+            Name = name;
+            Description = description;
+            Price = price;
+            IVA = iva;
+        }
+
+        private int CodeGeneration()
+        {
+            Random rnd = new Random();
+            return rnd.Next(1000, 10000);
+        }
+
 
     }
 }
