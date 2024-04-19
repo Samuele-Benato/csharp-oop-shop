@@ -47,7 +47,7 @@ namespace csharp_oop_shop
         private int CodeGeneration()
         {
             Random rnd = new Random();
-            return rnd.Next(1000, 10000);
+            return rnd.Next(10000, 99999);
         }
 
 
