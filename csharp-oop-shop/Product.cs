@@ -19,7 +19,7 @@ namespace csharp_oop_shop
         public decimal Price { get; set; }
         public decimal IVA { get; set; }
 
-        public Product(string name, string description, decimal price, decimal iva)
+        public Product(string name, string description, decimal price, decimal iva = 22)
         {
             _code = CodeGeneration();
             Name = name;
